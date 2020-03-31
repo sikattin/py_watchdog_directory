@@ -17,7 +17,13 @@ CONF_NAME = "watchdog_dir.conf"
 LOGPATH = '/var/log/watchdog_dir.log'
 SMTPHOST = 'xxx.xxx.xxx.xxx'
 
+"""
+特定のディレクトリ配下のファイル生成、変更、削除を監視・検知するスクリプト
 
+下記の外部パッケージに依存
+- watchdog
+- mylogger
+"""
 class FTPEventHandler(FileSystemEventHandler):
     """イベントハンドラ
     
